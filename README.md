@@ -67,8 +67,6 @@ SQL databases are relational databases that use structured schemas and tables to
 1. **Scalability:** Vertical scaling (adding more power to a single server) is the primary scaling model, which can be costly.
 2. **Rigidity:** Changing schemas or handling unstructured data can be challenging.
 
----
-
 ## 2. NoSQL Databases
 NoSQL databases are non-relational databases designed for scalability and flexibility. They handle unstructured, semi-structured, or structured data.
 
@@ -94,5 +92,48 @@ NoSQL databases are non-relational databases designed for scalability and flexib
 ### Disadvantages:
 1. **Weaker Consistency:** Often trades off strong consistency for performance and availability.
 2. **Less Mature Ecosystem:** Fewer standardized tools and practices compared to SQL.
+
+---
+
+# What is CAP Theorem?
+
+The CAP theorem (also known as Brewer's theorem) is a principle in distributed systems that states it is impossible for a distributed system to simultaneously provide all three of the following guarantees:
+
+1. **Consistency (C):**
+    * Every read receives the most recent write or an error.
+2. **Availability (A):**
+    * Every request (read or write) receives a response, regardless of whether it is successful or fails.
+3. **Partition Tolerance (P):**
+    * The system continues to operate despite network partitions (communication breakdowns between nodes).
+      
+
+## Key Insight
+The CAP theorem states that in the presence of a network partition, a distributed system can achieve at most **two out of the three guarantees**:
+
+- **Consistency and Availability (CA):** 
+    * The system is consistent and available as long as there is no network partition.
+- **Consistency and Partition Tolerance (CP):** 
+    * The system sacrifices availability to maintain consistency during network partitions.
+- **Availability and Partition Tolerance (AP):** 
+    * The system remains available but may return inconsistent results during network partitions.
+
+## Implications
+Distributed systems need to prioritize **two of the three properties** based on the application's requirements and trade-offs.\
+
+
+## Real-World Considerations
+
+### **Eventual Consistency**
+- Many systems adopt a relaxed form of consistency, known as **eventual consistency**, to balance the CAP trade-offs.
+- For example, in **AP systems**, data may become consistent eventually once partitions are resolved.
+
+### **Network Partitions**
+- Network partitions are relatively common in large-scale distributed systems, making **partition tolerance** a practical necessity.
+- This often forces a trade-off between **consistency** and **availability**.
+
+
+## Conclusion
+Understanding the CAP theorem helps in designing distributed systems tailored to specific use cases, depending on whether **consistency**, **availability**, or **tolerance to network failures** is more critical.
+
 
 
