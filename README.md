@@ -169,6 +169,44 @@ Vertical scaling (scale-up) involves upgrading the hardware of a single machine 
 - **Limited Scalability:** There’s a limit to how much a single machine can scale.
 - **Downtime:** Upgrades often require downtime, which can impact availability.
 
+---
+
+## What is a Process?
+A **process** is an independent program in execution, managed by the operating system (OS).
+
+### **Key Features of a Process:**
+1. **Isolation:**
+    - Each process has its own memory space (heap, stack, code, and data segments).
+    - Processes do not share memory by default.
+2. **Overhead:**
+    - Processes are heavyweight because of their isolation. 
+    - Communication between processes (Inter-Process Communication, IPC) requires additional mechanisms like pipes, sockets, or shared memory.
+
+---
+
+## What is a Thread?
+A **thread** is the smallest unit of execution within a process. Threads exist within a process and share the process's resources, such as memory and file handles.
+
+### **Key Features of a Thread:**
+1. **Shared Memory:**
+    - Threads within the same process share the same memory and resources, making communication between threads faster.
+2. **Lightweight:**
+    - Threads have less overhead compared to processes because they share the process's resources and do not require separate memory spaces.
+3. **Multithreading:**
+    - Multithreading enables a single process to perform multiple tasks in parallel, enhancing performance for CPU-bound or I/O-bound tasks.
+
+---
+
+## When to Use Processes vs. Threads?
+
+### **Processes:**
+- Suitable for tasks that require isolation (e.g., running separate applications).
+- Best for high-security requirements or fault isolation.
+
+### **Threads:**
+- Ideal for tasks within the same application that can benefit from shared memory (e.g., web servers handling multiple requests).
+- Useful for improving performance with parallelism and concurrency.
+
 
 
 
