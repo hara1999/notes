@@ -253,6 +253,54 @@ A **thread** is the smallest unit of execution within a process. Threads exist w
 
 This distinction is important when designing systems for performance, scalability, and efficiency.
 
+---
+
+# Caching in System Design
+
+**Caching** is a system design concept that involves storing frequently accessed data in a temporary, high-speed storage layer (cache) to improve application performance and reduce the load on the underlying system. Caches are typically faster than the primary data storage systems, making them an essential component in scalable and efficient system architectures.
+
+---
+
+## Key Characteristics of Caching
+1. **Fast Access:**
+    - Caches are designed to provide faster access to data compared to databases or other persistent storage systems.
+2. **Temporary Storage:**
+    - Data in a cache is stored temporarily and may be evicted based on predefined policies (e.g., when the cache is full or data becomes stale).
+3. **Layered Design:**
+    - Caches act as an intermediate layer between the application and the data source.
+
+---
+
+## Benefits of Caching
+1. **Reduced Latency:**
+    - Speeds up data retrieval by serving requests directly from the cache rather than the slower primary storage.
+2. **Increased Throughput:**
+    - Reduces the workload on databases and back-end systems, allowing them to handle more concurrent requests.
+
+---
+
+## Caching Strategies
+1. **Write-Through Cache:**
+    - Data is written to the cache and the backing store simultaneously.
+    - Ensures data consistency but adds write latency.
+
+2. **Write-Back Cache:**
+    - Data is written to the cache first and later synchronized with the backing store.
+    - Improves write performance but may risk data loss during failures.
+
+3. **Write-Around Cache:**
+    - Writes go directly to the backing store, bypassing the cache.
+    - Useful when cached data is unlikely to be accessed again soon.
+
+4. **Cache-Aside (Lazy Loading):**
+    - The application first checks the cache for data; if not present, it fetches data from the source and adds it to the cache.
+    - Reduces unnecessary caching of infrequently accessed data.
+
+---
+
+## Summary
+Caching plays a vital role in system design by improving performance, scalability, and responsiveness. By using appropriate caching strategies and configurations, applications can efficiently handle high traffic and deliver a better user experience.
+
 
 
 
