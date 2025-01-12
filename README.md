@@ -95,6 +95,8 @@ NoSQL databases are non-relational databases designed for scalability and flexib
 
 ---
 
+
+
 # What is CAP Theorem?
 
 The CAP theorem (also known as Brewer's theorem) is a principle in distributed systems that states it is impossible for a distributed system to simultaneously provide all three of the following guarantees:
@@ -137,6 +139,8 @@ Understanding the CAP theorem helps in designing distributed systems tailored to
 
 ---
 
+
+
 # Difference Between Horizontal Scaling and Vertical Scaling
 
 ## 1. Horizontal Scaling
@@ -171,6 +175,8 @@ Vertical scaling (scale-up) involves upgrading the hardware of a single machine 
 
 ---
 
+
+
 ## What is a Process?
 A **process** is an independent program in execution, managed by the operating system (OS).
 
@@ -183,6 +189,8 @@ A **process** is an independent program in execution, managed by the operating s
     - Communication between processes (Inter-Process Communication, IPC) requires additional mechanisms like pipes, sockets, or shared memory.
 
 ---
+
+
 
 ## What is a Thread?
 A **thread** is the smallest unit of execution within a process. Threads exist within a process and share the process's resources, such as memory and file handles.
@@ -209,6 +217,8 @@ A **thread** is the smallest unit of execution within a process. Threads exist w
 
 ---
 
+
+
 # Understanding Concurrency and Parallelism
 
 ## What is Concurrency?
@@ -224,6 +234,8 @@ A **thread** is the smallest unit of execution within a process. Threads exist w
 - Improves responsiveness and resource utilization in systems with multiple tasks that can wait or depend on I/O operations.
 
 ---
+
+
 
 ## What is Parallelism?
 **Parallelism** is the simultaneous execution of multiple tasks on different processors or cores. It focuses on dividing a task into smaller subtasks that can run at the same time.
@@ -254,6 +266,8 @@ A **thread** is the smallest unit of execution within a process. Threads exist w
 This distinction is important when designing systems for performance, scalability, and efficiency.
 
 ---
+
+
 
 # Caching in System Design
 
