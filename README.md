@@ -266,6 +266,7 @@ A **thread** is the smallest unit of execution within a process. Threads exist w
 This distinction is important when designing systems for performance, scalability, and efficiency.
 
 ---
+---
 
 
 
